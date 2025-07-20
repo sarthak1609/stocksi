@@ -24,7 +24,7 @@ async function saveEmailAndRedirect(email) {
             submittedAt: firebase.firestore.FieldValue.serverTimestamp()
         });
         console.log("Document written with ID: ", docRef.id);
-        
+        alert("Thank You for your interest");
         window.location.href = 'index.html';
 
     } catch (e) {
