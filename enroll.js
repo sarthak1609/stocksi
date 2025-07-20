@@ -1,20 +1,4 @@
 
-const firebaseConfig = {
-  apiKey: "AIzaSyC_aDNfIyFcrvg1eaJlDYeil0eZqHBnbkk",
-  authDomain: "rewear-44637.firebaseapp.com",
-  projectId: "rewear-44637",
-  storageBucket: "rewear-44637.firebasestorage.app",
-  messagingSenderId: "948075010395",
-  appId: "1:948075010395:web:7e24083c7c6e468a15e27e",
-  measurementId: "G-TFCZ5D4VNV"
-};
-
-
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore(); 
-
-
-
 async function saveEmailAndRedirect(email) {
     const submitButton = document.querySelector('#enrollForm button');
     submitButton.disabled = true;
@@ -48,11 +32,6 @@ function handleLogin(event) {
         alert("Please enter a valid email address.");
     }
 }
-
-// 
-//https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=2070&auto=format&fit=crop
-//https://images.unsplash.com/photo-1624953587687-e2712776c1b5?q=80&w=2070&auto=format&fit=crop
-
 
 document.addEventListener('DOMContentLoaded', () => {
     

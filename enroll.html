@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enroll for stocKsi Early Access</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="flex items-center justify-center min-h-screen p-4">
+  <div class="absolute inset-0 bg-grid-white/[0.05]"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-[#0F0F1A] via-transparent to-[#0F0F1A]"></div>
+
+  <div class="relative w-full max-w-md text-center">
+    <a href="index.html" class="inline-block mb-8 text-4xl font-bold text-white">stocKsi.</a>
+
+    <div class="enroll-box p-8 rounded-2xl shadow-2xl">
+      <h2 class="text-3xl font-bold text-white">Get Early Access</h2>
+      <p class="text-gray-400 mt-2 mb-6">
+        Join the waitlist and we'll email you on launch day with your ₹100
+        bonus!
+      </p>
+
+      <form id="enrollForm" class="space-y-6">
+        <div>
+          <label for="email" class="sr-only">Email address</label>
+          <input type="email" name="email" id="email" required
+            class="w-full bg-gray-800/50 border border-gray-700 text-white rounded-lg px-4 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400"
+            placeholder="Enter your email address" />
+        </div>
+        <button type="submit" id="submitButton"
+          class="submit-button w-full text-white font-bold py-3 px-4 rounded-lg text-lg">
+          Secure My Spot
+        </button>
+      </form>
+
+      <a href="index.html#foot" class="block text-gray-500 mt-6 text-center">Want to invest! Contact me.</a>
+      <p id="errorMessage" class="text-red-400 mt-4 text-sm h-4"></p>
+    </div>
+
+    <p class="text-gray-600 text-xs mt-6">
+      We respect your privacy. No spam, ever.
+    </p>
+  </div>
+  <!-- <script src="firebase-config.js"></script> -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

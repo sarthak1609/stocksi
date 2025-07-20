@@ -1,61 +1,97 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-
+/* --- General & Reusable Styles --- */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #F7F7F7; /* Light Gray */
-    color: #1A1A1A; /* Charcoal */
+    background-color: #0F0F1A; /* Dark background */
+    color: #E0E0E0; /* Light text */
 }
 
-/* Define custom color properties for easy reuse */
-:root {
-    --primary-color: #1A1A1A; /* Charcoal */
-    --light-bg-color: #F7F7F7; /* Light Gray */
-    --accent-primary-color: #4A90E2; /* Vibrant Blue */
-    --accent-primary-dark-color: #357ABD;
-    --accent-secondary-color: #50E3C2; /* Mint Green */
-    --accent-tertiary-color: #E94E77; /* Pink/Red */
+/* --- index.html specific styles --- */
+.hero-gradient-text {
+    background: linear-gradient(90deg, #4ade80, #34d399, #2dd4bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* Apply custom colors to Tailwind utility classes */
-.text-primary { color: var(--primary-color); }
-.bg-primary { background-color: var(--primary-color); }
-.bg-light-bg { background-color: var(--light-bg-color); }
-
-.text-accent-primary { color: var(--accent-primary-color); }
-.bg-accent-primary { background-color: var(--accent-primary-color); }
-.hover\:bg-accent-primary-dark:hover { background-color: var(--accent-primary-dark-color); }
-.border-accent-primary { border-color: var(--accent-primary-color); }
-
-.text-accent-secondary { color: var(--accent-secondary-color); }
-.bg-accent-secondary { background-color: var(--accent-secondary-color); }
-
-.text-accent-tertiary { color: var(--accent-tertiary-color); }
-.bg-accent-tertiary { background-color: var(--accent-tertiary-color); }
-
-
-/* Simple Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.cta-button {
+    background: linear-gradient(90deg, #10B981, #34D399);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(52, 211, 153, 0.4);
 }
 
-@keyframes fadeInUp {
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(52, 211, 153, 0.6);
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.enroll-section {
+    background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+}
+
+/* Animation for feature cards on scroll */
+@keyframes fade-in {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+.animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
 }
 
-.animate-fade-in {
-    animation: fadeIn 0.5s ease-in-out;
+
+/* --- enroll.html specific styles --- */
+.enroll-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
-.animate-fade-in-up {
-    animation: fadeInUp 0.6s ease-in-out;
+
+.submit-button {
+    background: linear-gradient(90deg, #10B981, #34D399);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(52, 211, 153, 0.4);
 }
-.animate-fade-in-down {
-    animation: fadeInDown 0.6s ease-in-out;
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(52, 211, 153, 0.6);
+}
+
+.submit-button:disabled {
+    background: #4B5563;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* --- thankyou.html specific styles --- */
+.thank-you-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.home-button {
+    background: linear-gradient(90deg, #10B981, #34D399);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(52, 211, 153, 0.4);
+}
+
+.home-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(52, 211, 153, 0.6);
 }

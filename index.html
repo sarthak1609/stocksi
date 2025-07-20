@@ -1,111 +1,333 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>stocKsi</title>
+    <title>stocKsi - The Fantasy Stock Market</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <!-- HEADER -->
-    <header
-      class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm shadow-sm z-50"
-    >
-      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="text-3xl font-bold text-primary">
-          <div style="font-family: sans-serif; font-size: 50px; font-weight: bold; color: #272775;">
-            stoc<span style="color: #663225;">Ksi</span>
-          </div>
-        </a>
-        <nav id="main-nav" class="flex items-center space-x-6">
-          <!-- Navigation links will be injected by script.js -->
+  <body class="overflow-x-hidden">
+    <!-- Header -->
+    <header class="absolute top-0 left-0 w-full z-50 py-4 px-4 sm:px-8">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-3xl font-bold text-white">stocKsi.</h1>
+        <nav id="desktop-nav" class="hidden md:flex items-center space-x-8">
+          <a href="#features" class="text-gray-300 hover:text-white transition"
+            >Features</a
+          >
+          <a
+            href="#how-it-works"
+            class="text-gray-300 hover:text-white transition"
+            >How It Works</a
+          >
+          <a
+            href="enroll.html"
+            class="bg-white text-black font-semibold px-5 py-2 rounded-full hover:bg-gray-200 transition"
+            >Enroll Now</a
+          >
         </nav>
+        <button id="mobile-menu-button" class="md:hidden text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden mt-4 bg-gray-900/80 backdrop-blur-lg rounded-lg p-4"
+      >
+        <a href="#features" class="block text-white py-2">Features</a>
+        <a href="#how-it-works" class="block text-white py-2">How It Works</a>
+        <a
+          href="enroll.html"
+          class="block bg-white text-black font-semibold px-5 py-2 rounded-full mt-2 text-center"
+          >Enroll Now</a
+        >
       </div>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="pt-24">
-      <!-- Hero Section -->
-      <section
-        class="bg-cover bg-center h-[70vh] text-white flex items-center"
-        style="background-image: url(bg.png);"
+    <!-- Hero Section -->
+    <main class="relative pt-32 pb-20 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(to_bottom,white_5%,transparent_95%)]"
+      ></div>
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#0F0F1A] z-10"
+      ></div>
+      <div
+        class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center"
       >
-        <div
-          class="bg-black bg-opacity-50 w-full h-full flex flex-col justify-center items-center text-center px-4"
+        <h2
+          class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight"
         >
-          <h2
-            class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 animate-fade-in-down"
+          The <span class="hero-gradient-text">Fantasy Stock Market</span
+          ><br class="hidden sm:block" />
+          Has Arrived.
+        </h2>
+        <p class="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-400">
+          Unleash your inner trader. Build fantasy stock portfolios, compete in
+          daily contests, and win real cash prizes. No DEMAT account needed.
+        </p>
+        <div
+          class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4"
+        >
+          <a
+            href="enroll.html"
+            class="cta-button text-white font-bold py-4 px-8 rounded-full text-lg w-full sm:w-auto"
           >
-            StocKsi - A stock market fantasy App
-          </h2>
-          <p class="text-base sm:text-lg md:text-xl mb-8 max-w-3xl animate-fade-in-up">
-            your skills—not your capital—make you a champion. Build portfolios, join contests, and win from prize pools. We’re launching soon, and we want your thoughts!
-          </p>
-          <div class="space-x-4">
-            <a
-              href="login.html"
-              class="bg-accent-primary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-accent-primary-dark transition duration-300 shadow-lg"
-            >
-              Join Now
-            </a>
-          </div>
+            Pre-Register & Get ₹100 Bonus
+          </a>
+          <a
+            href="#how-it-works"
+            class="bg-gray-700 text-white font-semibold py-4 px-8 rounded-full hover:bg-gray-600 transition w-full sm:w-auto"
+          >
+            Learn More
+          </a>
         </div>
-      </section>
 
-      <!-- Featured Items -->
-      <section id="featured-items" class="py-20 bg-light-bg">
-        <div class="container mx-auto px-6">
-          <h3 class="text-4xl font-bold text-center text-primary mb-12">
-            Top Features
-          </h3>
+        <!-- Image Showcase -->
+        <div class="mt-20 relative">
+          <div class="absolute -inset-2">
+            <div
+              class="w-full h-full max-w-6xl mx-auto opacity-30 blur-3xl"
+              style="
+                background: linear-gradient(
+                  90deg,
+                  rgba(52, 211, 153, 0.6) 0%,
+                  rgba(30, 58, 138, 0.6) 100%
+                );
+              "
+            ></div>
+          </div>
           <div
-            id="featured-items-container"
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            class="relative grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8 max-w-5xl mx-auto"
           >
-            <!-- Item cards will be injected here by script.js -->
+            <img
+              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop"
+              alt="Stock chart on a screen"
+              class="rounded-2xl shadow-2xl transform md:rotate-[-6deg] transition duration-500 hover:rotate-0 hover:scale-105"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=2070&auto=format&fit=crop"
+              alt="Person analyzing stock data"
+              class="rounded-2xl shadow-2xl z-10 transform md:scale-110 transition duration-500 hover:scale-115"
+            />
+            <img
+              src="https://media.istockphoto.com/id/2159126735/photo/a-double-exposure-image-of-skyscrapers-with-overlay-of-financial-graphs-set-against-a-blurred.jpg?s=612x612&w=0&k=20&c=Ak6KwcvAP3cI45q1qYuyPAnDtCOyCHuq4IRaTgW-Ako="
+              alt="Mobile phone with stock app"
+              class="rounded-2xl shadow-2xl transform md:rotate-[6deg] transition duration-500 hover:rotate-0 hover:scale-105"
+            />
           </div>
         </div>
-      </section>
+      </div>
     </main>
 
-    <!-- EXPANDED FOOTER -->
-    <footer id="footer-end" class="bg-primary text-white mt-20">
-      <div class="container mx-auto px-6 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <!-- About Section -->
-          <div class="col-span-1 md:col-span-2">
-            <h3 class="text-2xl font-bold mb-4">StocKsi</h3>
-            <p class="opacity-80 leading-relaxed">
-              StocKsi is a fantasy app which works for stock market. Add any stock of your choice and create portfolio. Create or join contests and win based on the change of your portfolio. Portfolio with highest change among all will win the contest and its prize. Try now.
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-4xl font-bold mb-4">Play and Win in 3 steps</h3>
+        <p class="text-gray-400 max-w-2xl mx-auto mb-12">
+          It's simple, fast, and incredibly fun. Here's how you can start
+          winning.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+          <!-- Step 1 -->
+          <div class="feature-card p-8 rounded-2xl">
+            <div
+              class="flex items-center justify-center h-16 w-16 rounded-full bg-green-500/20 mb-6"
+            >
+              <span class="text-3xl font-bold text-green-400">1</span>
+            </div>
+            <h4 class="text-2xl font-bold mb-2 text-white">Select a Contest</h4>
+            <p class="text-gray-400">
+              Browse various contests with different prize pools and entry fees.
+              Find the perfect battleground for your skills or create one of your choice.
             </p>
           </div>
-          <div></div>
-          <!-- Follow Us -->
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+          <!-- Step 2 -->
+          <div class="feature-card p-8 rounded-2xl">
+            <div
+              class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-500/20 mb-6"
+            >
+              <span class="text-3xl font-bold text-blue-400">2</span>
+            </div>
+            <h4 class="text-2xl font-bold mb-2 text-white">
+              Create Your Portfolio
+            </h4>
+            <p class="text-gray-400">
+              Use your knowledge to pick a set of real stocks without money. Build a fantasy
+              portfolio you believe will outperform the rest .
+            </p>
+          </div>
+          <!-- Step 3 -->
+          <div class="feature-card p-8 rounded-2xl">
+            <div
+              class="flex items-center justify-center h-16 w-16 rounded-full bg-purple-500/20 mb-6"
+            >
+              <span class="text-3xl font-bold text-purple-400">3</span>
+            </div>
+            <h4 class="text-2xl font-bold mb-2 text-white">Track & Win Big</h4>
+            <p class="text-gray-400">
+              Watch your portfolio perform in real-time on the live leaderboard.
+              Finish on top to win exciting cash prizes! 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-[#141421]">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-4xl font-bold text-center mb-12">
+          Your Ultimate Stock Market Playground
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="flex items-start space-x-4">
+            <div
+              class="flex-shrink-0 h-10 w-10 flex items-center justify-center bg-green-500/20 rounded-lg"
+            >
+              <svg
+                class="h-6 w-6 text-green-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01"
+                />
+              </svg>
+            </div>
             <div>
-              <h5 class="opacity-80 hover:opacity-100 transition">
-                +91 63524 89998
-              </h5>
-              <h5 class="opacity-80 hover:opacity-100 transition">
-                sarthaksuryavanshi16@gmail.com
-              </h5>
+              <h4 class="text-xl font-semibold text-white">
+                Win Real Cash Prizes
+              </h4>
+              <p class="text-gray-400 mt-1">
+                Put your skills to the test and get rewarded. Join contests with
+                prize pools ranging from hundreds to lakhs.
+              </p>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="flex items-start space-x-4">
+            <div
+              class="flex-shrink-0 h-10 w-10 flex items-center justify-center bg-green-500/20 rounded-lg"
+            >
+              <svg
+                class="h-6 w-6 text-green-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-white">
+                Test Skills, Risk-Free
+              </h4>
+              <p class="text-gray-400 mt-1">
+                Experience the thrill of trading without losing capital. It's
+                the perfect way to learn and refine your strategies.
+              </p>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="flex items-start space-x-4">
+            <div
+              class="flex-shrink-0 h-10 w-10 flex items-center justify-center bg-green-500/20 rounded-lg"
+            >
+              <svg
+                class="h-6 w-6 text-green-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-white">
+                Challenge Your Friends
+              </h4>
+              <p class="text-gray-400 mt-1">
+                Create private contests and invite your circle to a private
+                showdown. Prove you know the market best.
+              </p>
             </div>
           </div>
         </div>
-        <div
-          class="mt-16 border-t border-white/20 pt-8 text-center text-sm opacity-80"
-        >
-          StocKsi by Sarthak Suryavanshi.
+      </div>
+    </section>
+
+    <!-- Enroll Now CTA Section -->
+    <section class="py-20 enroll-section">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-4xl font-bold text-white">
+          Ready to Turn Predictions into Profits?
+        </h3>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-blue-200">
+          Be the first to know when we launch. Pre-register now and get an
+          exclusive ₹100 bonus in your wallet on day one.
+        </p>
+        <div class="mt-8">
+          <a
+            href="enroll.html"
+            class="bg-white text-blue-600 font-bold py-4 px-10 rounded-full text-lg hover:bg-gray-200 transition-transform duration-300 inline-block transform hover:scale-105"
+          >
+            Enroll For Early Access
+          </a>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <!-- Firebase and Scripts -->
+    <!-- Footer -->
+    <footer id="foot" class="bg-[#0F0F1A] border-t border-gray-800">
+      <div
+        class="container mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center text-gray-500"
+      >
+        <p>stocKsi by Sarthak Suryavanshi</p>
+        <p class="text-sm mt-2">
+          +91 63524 89998 | sarthaksuryavanshi16@gmail.com
+        </p>
+      </div>
+    </footer>
+    
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    <script src="firebase-config.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
