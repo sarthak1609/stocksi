@@ -1,0 +1,61 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7F7F7; /* Light Gray */
+    color: #1A1A1A; /* Charcoal */
+}
+
+/* Define custom color properties for easy reuse */
+:root {
+    --primary-color: #1A1A1A; /* Charcoal */
+    --light-bg-color: #F7F7F7; /* Light Gray */
+    --accent-primary-color: #4A90E2; /* Vibrant Blue */
+    --accent-primary-dark-color: #357ABD;
+    --accent-secondary-color: #50E3C2; /* Mint Green */
+    --accent-tertiary-color: #E94E77; /* Pink/Red */
+}
+
+/* Apply custom colors to Tailwind utility classes */
+.text-primary { color: var(--primary-color); }
+.bg-primary { background-color: var(--primary-color); }
+.bg-light-bg { background-color: var(--light-bg-color); }
+
+.text-accent-primary { color: var(--accent-primary-color); }
+.bg-accent-primary { background-color: var(--accent-primary-color); }
+.hover\:bg-accent-primary-dark:hover { background-color: var(--accent-primary-dark-color); }
+.border-accent-primary { border-color: var(--accent-primary-color); }
+
+.text-accent-secondary { color: var(--accent-secondary-color); }
+.bg-accent-secondary { background-color: var(--accent-secondary-color); }
+
+.text-accent-tertiary { color: var(--accent-tertiary-color); }
+.bg-accent-tertiary { background-color: var(--accent-tertiary-color); }
+
+
+/* Simple Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-in-out;
+}
+.animate-fade-in-down {
+    animation: fadeInDown 0.6s ease-in-out;
+}

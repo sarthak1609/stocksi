@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stocky</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header
+      class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm shadow-sm z-50"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-3xl font-bold text-primary"><div style="font-family: sans-serif; font-size: 50px; font-weight: bold; color: #272775;">
+  stoc<span style="color: #663225;">K</span>si
+</div></a>
+        
+        <nav id="main-nav" class="flex items-center space-x-6">
+          <!-- Navigation links will be injected by script.js -->
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="pt-24">
+      <!-- Hero Section -->
+      <section
+        class="bg-cover bg-center h-[70vh] text-white flex items-center"
+        style="
+           background-image:url(bg.png); 
+        "
+      >
+        <div
+          class="bg-black bg-opacity-50 w-full h-full flex flex-col justify-center items-center text-center px-4"
+        >
+          <h2
+            class="text-5xl md:text-5xl font-extrabold mb-4 animate-fade-in-down"
+          >
+            StocKsi - A stock market fantasy App
+          </h2>
+          <p class="text-xl md:text-1xl mb-8 max-w-3xl animate-fade-in-up">
+            your skills—not your capital—make you a champion. Build portfolios, join contests, and win from prize pools. We’re launching soon, and we want your thoughts!
+          </p>
+          <div class="space-x-4">
+            <a
+              href="login.html"
+              class="bg-accent-primary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-accent-primary-dark transition duration-300 shadow-lg"
+              >Join Now</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="featured-items" class="py-20 bg-light-bg">
+        <div class="container mx-auto px-6">
+          <h3 class="text-4xl font-bold text-center text-primary mb-12">
+            Top Features
+          </h3>
+          <div
+            id="featured-items-container"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            <!-- Item cards will be injected here by script.js -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- EXPANDED FOOTER -->
+    <footer id='footer-end' class="bg-primary text-white mt-20">
+      <div class="container mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <!-- About Section -->
+          <div class="col-span-1 md:col-span-2">
+            <h3 class="text-2xl font-bold mb-4">StocKsi</h3>
+            <p class="opacity-80 leading-relaxed">
+              StocKsi is a fantasy app which works for stock market. Add any stock of your choice and create portfolio. Create or join contests and win based on the change of your portfolio. Portfolio with highest change among all will win the contest and its prize. Try now.
+            </p>
+          </div>
+          <div></div>
+          <!-- Follow Us -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+            <div>
+               <h5 class="opacity-80 hover:opacity-100 transition">+91 63524 89998</h5>
+               <h5 class="opacity-80 hover:opacity-100 transition">sarthaksuryavanshi16@gmail.com</h5>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-16 border-t border-white/20 pt-8 text-center text-sm opacity-80"
+        >
+          StocKsi by Sarthak Suryavanshi.
+        </div>
+      </div>
+    </footer>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<!-- 2. Load your new configuration file -->
+<script src="firebase-config.js"></script>
+
+<!-- 3. Finally, load your main application script -->
+<script src="script.js"></script>
+  </body>
+</html>
