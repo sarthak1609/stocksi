@@ -47,19 +47,8 @@ async function saveEmailAndRedirect(email, feedback) {
     }
 }
 
+
 function handleLogin(event) {
-    event.preventDefault();
-    const emailInput = document.getElementById('email');
-    const email = emailInput.value;
-
-    if (email && email.includes('@')) {
-        saveEmailAndRedirect(email);
-    } else {
-        alert("Please enter a valid email address.");
-    }
-}
-
-function handleLoginwithfeedback(event) {
     event.preventDefault();
     const feed = document.getElementById('feedback');
     const feedback = feed.value;
@@ -68,9 +57,13 @@ function handleLoginwithfeedback(event) {
 
 
     if (email && email.includes('@')) {
-        saveEmailAndRedirect(email, feedback);
-    } else {
+        saveEmailAndRedirect(email);
+    } else  {
         alert("Please enter a valid email address.");
+    }
+
+    if(feedback){
+        saveEmailAndRedirect(email,feedback);
     }
 }
 
@@ -80,12 +73,13 @@ function handleLoginwithfeedback(event) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const feedback = document.getElementById('feedback');
+    // const feedback = document.getElementById('feedback');
     const loginForm = document.getElementById('enrollForm');
-    if (feedback) {
-        feedback.addEventListener('submit', handleLoginwithfeedback)
-    }
-    else if (loginForm) {
+    // if (feedback) {
+    //     feedback.addEventListener('submit', handleLoginwithfeedback)
+    // }
+    // else
+     if (loginForm) {
         loginForm.addEventListener('submit', handleLogin);
     }
 const mobileMenuButton = document.getElementById('mobile-menu-button');
