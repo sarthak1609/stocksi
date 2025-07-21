@@ -61,4 +61,39 @@ document.addEventListener('DOMContentLoaded', () => {
         loginForm.addEventListener('submit', handleLogin);
     }
 
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    // A safety check to ensure both elements exist before trying to add functionality.
+    if (mobileMenuButton && mobileMenu) {
+        // Add a 'click' event listener to the button.
+        mobileMenuButton.addEventListener('click', () => {
+            // When the button is clicked, this function runs.
+            // It toggles the 'hidden' class on the menu panel, making it appear or disappear.
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+
+    // --- Intersection Observer for Scroll Animations ---
+    // This makes the feature cards fade in as you scroll down the page.
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Check if the element is now visible in the viewport.
+            if (entry.isIntersecting) {
+                // Add the animation class.
+                entry.target.classList.add('animate-fade-in');
+                // Stop observing the element after the animation has triggered once.
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+      // Trigger the animation when at least 10% of the element is visible.
+      threshold: 0.1 
+    });
+
+    // Find all the elements with the 'feature-card' class and tell the observer to watch them.
+    document.querySelectorAll('.feature-card').forEach(el => {
+        observer.observe(el);
+    });
+
 });
