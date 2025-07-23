@@ -57,13 +57,9 @@ function handleLogin(event) {
 
 
     if (email && email.includes('@')) {
-        saveEmailAndRedirect(email);
+        saveEmailAndRedirect(email,feedback);
     } else  {
         alert("Please enter a valid email address.");
-    }
-
-    if(feedback){
-        saveEmailAndRedirect(email,feedback);
     }
 }
 
